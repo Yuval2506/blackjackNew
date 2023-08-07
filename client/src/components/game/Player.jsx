@@ -1,13 +1,31 @@
+import { useEffect, useState } from 'react';
+import getCard from '../../services/requests';
+import "./HitStay.css";
 
-import react, {useState} from "react"
 
-async function player (){{
-        // GET request using fetch with async/await
-        const response = await fetch('https://localhost:3000');
-        const data = await response.json();
-        this.setState({ totalReactPackages: data.total })
-        console.log();
-    }
+function Player() {
+
+    const [card, setCard] = useState("");
+    // setCard(useEffect(getCard));
+
+    useEffect(() => {
+        (async () => {
+            const pickedCard = await getCard();
+            setCard(pickedCard);
+        }
+        )();
+    }, [])
+
+    return (
+        <div className="player-div">
+            <h1 className='player-dealer'>Player:</h1>
+            <span>
+                <img className="pic-option" src={`${process.env.PUBLIC_URL}/assets/cards/${card.value+card.kind}.svg`} alt="Picked Card"></img>
+                <img className="pic-option" src={`${process.env.PUBLIC_URL}/assets/cards/${card.value+card.kind}.svg`} alt="Picked Card"></img>           
+            </span>
+            <button className="game-option">Stand</button>
+        </div>
+    );
 }
 
 export default Player;

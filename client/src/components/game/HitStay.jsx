@@ -1,15 +1,17 @@
-// import Player from "./Player"
+import Player from "./Player"
 import Computer from "./Computer" 
+import './HitStay.css'
 
 function HitStay (){
     return (
         <div>
-            <div>
-                <Computer/>
+            <div className="logo-div">
+                <img  src={`${process.env.PUBLIC_URL}/assets/blackjack.svg`} className="App-logo" alt="logo" />
             </div>
-            <div>
-                <button>Hit</button>
-                <button>Stand</button>
+            
+            <div className="cards-container">
+                <Computer/>
+                <Player/>
             </div>
         </div>
     );

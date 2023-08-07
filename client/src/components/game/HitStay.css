@@ -1,0 +1,29 @@
+
+.player-dealer {
+    color:white;
+}
+
+.cards-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.game-option {
+    margin-top: 50px;
+}
+
+.player-div {
+    margin-left: 100px;
+    margin-right: 100px;
+    height:360px;
+}
+
+.pic-option {
+    margin-right: 10px;
+    margin-right: 10px;
+}
+
+.logo-div {
+    width: 200px;
+    height: 135px;
+}

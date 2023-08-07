@@ -2,11 +2,12 @@ import { useState } from 'react';
 import StartPlaying  from "../homeScreen/StartPlaying"
 import LogoShow  from "../homeScreen/LogoShow"
 import HitStay from "./HitStay"
+import "./Game.css"
 
 const Game = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     return (
-        <div>
+        <div className="home-div">
             {isPlaying ? <HitStay/> : <LogoShow/>}
             {isPlaying ? null : <StartPlaying isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>}
         </div>
