@@ -1,6 +1,13 @@
 
 .player-dealer {
     color:white;
+    margin-top: 0px;
+}
+
+.counter {
+    color:white;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .cards-container {
@@ -10,12 +17,13 @@
 
 .game-option {
     margin-top: 50px;
+    display: inline-block;
 }
 
 .player-div {
-    margin-left: 100px;
-    margin-right: 100px;
-    height:360px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height:500px;
 }
 
 .pic-option {
@@ -26,4 +34,8 @@
 .logo-div {
     width: 200px;
     height: 135px;
+}
+
+.while-playing-div {
+    height:1000px;
 }

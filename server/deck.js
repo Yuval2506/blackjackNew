@@ -22,8 +22,6 @@ export class Deck {
         }
     }
 
-    getCard() {
-      return this.newArray.shift();
-    }
+    
 }
 

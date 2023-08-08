@@ -5,7 +5,7 @@ function StartPlaying ({isPlaying, setIsPlaying}){
 
 
     return (
-        <div>
+        <div className="start-playng-div">
                 <button onClick={() => setIsPlaying(!isPlaying)} id="btn-start-playing">Start Playing</button>
         </div>
     );

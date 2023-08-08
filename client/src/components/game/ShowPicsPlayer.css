@@ -1,0 +1,5 @@
+.player-div-pics {
+    display:flex;
+    flex-direction: row;
+
+}

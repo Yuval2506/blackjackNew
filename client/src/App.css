@@ -1,6 +1,10 @@
-.App {
+
+
+body{
   text-align: center;
-  height:100vmin;
+  background-color: #282c34;
+  width: 100vw;
+  height:100vh;
 
 }
 

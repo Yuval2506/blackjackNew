@@ -7,15 +7,13 @@ const port = 4000
 
 app.use(cors());
 
-app.get('/getCard', (req, res) => {
+app.get('/getDeck', (req, res) => {
     console.log("server")
     const shuffeledDeck = new Deck();
+    console.log(shuffeledDeck);
     shuffeledDeck.shuffle();
     console.log(shuffeledDeck);
-    const pickedCard = shuffeledDeck.getCard();
-    console.log(pickedCard);
-    console.log(pickedCard)
-    res.json(pickedCard)
+    res.json(shuffeledDeck);
     // res.status(201).json({ result: true })
   })
 
