@@ -1,6 +1,6 @@
 export default function ShowPicsComputer({computerCards, computerLost}){
-    console.log("showPics");
-    if (computerLost=="inProgress")
+    console.log("showPics", computerLost);
+    if (computerLost==="inProgress")
     {
         console.log("showPics2");
         return (

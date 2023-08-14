@@ -4,7 +4,7 @@ import "./HitStay.css";
 import ShowPicsPlayer from "./ShowPicsPlayer";
 
 
-function Player({getCard, playerCards, setPlayerCards, playerLost, setPlayerLost, setComputerLost, countPlayer, setCountPlayer}) {
+function Player({getCard, playerCards, setPlayerCards, playerLost, setPlayerLost, computerLost, setComputerLost, countPlayer, setCountPlayer}) {
 
     const btnHit = document.getElementById("btn-hit");
 
@@ -35,6 +35,13 @@ function Player({getCard, playerCards, setPlayerCards, playerLost, setPlayerLost
             setCountPlayer(20);
         }*/
     },[playerCards])
+
+    useEffect(() => {
+
+        if (computerLost==="start"){
+        btnHit.style.visibility = 'hidden';}
+        
+    },[computerLost])
 
     useEffect(() => {
         if (countPlayer>21){
