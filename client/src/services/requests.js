@@ -1,12 +1,16 @@
 const ENDPOINT = 'http://localhost:4000';
 
-async function getDeck() {
+/*async function getDeck() {
     console.log("requested deck")
-    const result = await fetch(`${ENDPOINT}/getDeck`);
-   
-    const parsedResult = await result.json();
+    const deck = await fetch(`${ENDPOINT}/getDeck`);
+    const parsedDeck = await deck.json();
+    return parsedDeck;
+}*/
 
-    return parsedResult;
+async function getCard() {
+    console.log("requested card")
+    const card = await fetch(`${ENDPOINT}/get-card`);
+    return card.json();
 }
 
-export default getDeck;
+export {getCard};
