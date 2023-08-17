@@ -13,4 +13,15 @@ async function getCard() {
     return card.json();
 }
 
-export {getCard};
+async function getLength() {
+    console.log("requested length")
+    const length = await fetch(`${ENDPOINT}/get-length`);
+    return length.json();
+}
+
+async function shuffle() {
+    console.log("requested shuffle")
+    await fetch(`${ENDPOINT}/shuffle`);
+}
+
+export {getCard, getLength, shuffle};

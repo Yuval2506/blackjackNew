@@ -27,6 +27,16 @@ console.log(shuffledDeck);
     res.send(shuffledDeck.getCard());
   })
 
+  app.get('/get-length', (req, res) => {
+    console.log("get-length")
+    res.json({length: shuffledDeck.getLength()}).status(200);
+  })
+
+  app.get('/shuffle', (req, res) => {
+    console.log("shuffle")
+    shuffledDeck.shuffle();
+  })
+
   app.listen(port, () => {
     console.log(`blackjack app listening on port ${port}`)
   }) 
