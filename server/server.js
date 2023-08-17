@@ -9,8 +9,6 @@ app.use(cors());
 console.log("deckCreated")
 const shuffledDeck = new Deck();
 console.log(shuffledDeck);
-shuffledDeck.shuffle();
-console.log(shuffledDeck);
 
 /*app.get('/getDeck', (req, res) => {
     console.log("detDeck")

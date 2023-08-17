@@ -31,9 +31,6 @@ function HitStay({ isPlaying, setIsPlaying }) {
   useEffect(() => {
     (async () => {
       const { length: deckLength } = await getLength();
-      if (deckLength === 0) {
-        await shuffle();
-      }
       setLength(deckLength);
     })();
   }, [computerCards, playerCards]);
